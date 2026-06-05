@@ -49,7 +49,7 @@ class MessagePublic extends Message
         return $db->query(
             'SELECT m.*,
                     u.nom AS exp_nom, u.prenom AS exp_prenom, u.avatar AS exp_avatar, u.role AS exp_role,
-                    f.nom_original AS fichier_nom, f.type AS fichier_type, f.chemin AS fichier_chemin
+                    f.nom_original AS fichier_nom, f.type_mime AS fichier_type, f.chemin AS fichier_chemin
              FROM messages m
              JOIN utilisateurs u ON m.expediteur_id = u.id
              LEFT JOIN fichiers f ON m.fichier_id = f.id

@@ -74,7 +74,7 @@ class MessagePrive extends Message
             'SELECT m.*, 
                     u1.nom AS exp_nom, u1.prenom AS exp_prenom, u1.avatar AS exp_avatar, u1.role AS exp_role,
                     u2.nom AS dest_nom, u2.prenom AS dest_prenom,
-                    f.nom_original AS fichier_nom, f.type AS fichier_type, f.chemin AS fichier_chemin
+                    f.nom_original AS fichier_nom, f.type_mime AS fichier_type, f.chemin AS fichier_chemin
              FROM messages m
              JOIN utilisateurs u1 ON m.expediteur_id = u1.id
              JOIN utilisateurs u2 ON m.destinataire_id = u2.id
